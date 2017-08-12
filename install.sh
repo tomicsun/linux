@@ -44,7 +44,7 @@ pacman -S xorg plasma konsole dolphin fcitx wqy-zenhei wqy-microhei adobe-source
            echo -e 'export GTK_IM_MODULE=fcitx\nexport QT_IM_MODULE=fcitx\nexport XMODIFIERS="@im=fcitx"' > ~/.xprofile && \
            systemctl enable sddm NetworkManager
 #[option] swap
-#fallocate -l 2G /swap && chmod 600 /swap && mkswap /swap && swapon /swap && echo '/swap none swap defaults 0 0' >> /etc/fstab
+fallocate -l 4G /swap && chmod 600 /swap && mkswap /swap && swapon /swap && echo '/swap none swap defaults 0 0' >> /etc/fstab
 #[option] user
 useradd -m -G wheel -s /usr/bin/zsh -p asas tomic
 #[option] samba
