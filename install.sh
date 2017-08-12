@@ -1,7 +1,7 @@
 #[option] remote
 #passwd && systemctl start sshd
 #[option] wipefs
-wipefs -a /dev/sda
+# wipefs -a /dev/sda
 #[1-gpt/efi]
 #parted /dev/sda -s -a optimal mklabel gpt mkpart primary 300m 100% mkpart primary 1m 300m && \
 #           mkfs.ext4 /dev/sda1 && mount /dev/sda1 /mnt && mkdir -p /mnt/boot/EFI && \
